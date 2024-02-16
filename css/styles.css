@@ -73,8 +73,8 @@ img {
 }
 
 .section {
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 72px;
+  padding-bottom: 72px;
   margin: 0 auto;
 }
 
@@ -154,7 +154,7 @@ img {
   position: fixed;
   width: 100%;
 
-  z-index: 9;
+  /* z-index: 9; */
 
   background: var(--WHITE, #fff);
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
@@ -293,6 +293,9 @@ menu {
 
 .hero {
   max-width: 1440px;
+  width: 320px;
+  height: 432px;
+  margin-top: 72px;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #2e2f42;
@@ -326,6 +329,8 @@ menu {
 
 @media only screen and (min-width: 768px) {
   .hero {
+    width: 768px;
+    height: 436px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -346,6 +351,8 @@ menu {
 
 @media only screen and (min-width: 1158px) {
   .hero {
+    height: 600px;
+    width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -369,15 +376,15 @@ menu {
   text-align: center;
 
   font-family: Roboto;
-  font-size: 56px;
+  font-size: 36px;
   font-weight: 700;
   font-style: normal;
   line-height: 1.07;
   letter-spacing: 0.02em;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
-  max-width: 496px;
+  margin-bottom: 72px;
+  max-width: 432px;
 }
 
 .hero-button {
@@ -523,18 +530,13 @@ menu {
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
-  letter-spacing: 0.32px;
-
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
 }
 
 @media only screen and (min-width: 768px) {
   .benefits-item-text {
-    font-weight: 400;
+    font-weight: 500;
   }
 }
 
@@ -633,6 +635,7 @@ menu {
 
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
+  width: 264px;
 }
 
 .team-item-info {
@@ -679,6 +682,8 @@ menu {
 
 .portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 @media only screen and (min-width: 768px) {
@@ -761,8 +766,8 @@ menu {
 
 /* #region:footer */
 .footer {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #2e2f42;
 }
 
@@ -863,7 +868,6 @@ menu {
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.02em;
-
   margin-bottom: 16px;
 }
 
@@ -973,12 +977,11 @@ menu {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #ffffff;
-
   cursor: pointer;
-
   background-color: #4d5ae5;
   border: none;
   border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .subscribe-form-svg {
@@ -987,7 +990,7 @@ menu {
 
 .subscribe-form-submit:hover,
 .subscribe-form-submit:focus {
-  fill: yellow;
+  background-color: #404bbf;
 }
 
 /* #endregion:subscribe */
@@ -1207,6 +1210,9 @@ menu {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .modal-form-checkbox-label-span {
@@ -1221,6 +1227,7 @@ menu {
   align-items: center;
   justify-content: center;
   fill: transparent;
+  flex-shrink: 0;
 }
 
 .modal-form-checkbox-link {
@@ -1243,7 +1250,7 @@ input[type='checkbox']:checked + label > span {
   width: 100%;
   height: 100%;
 
-  background-color: #f4f4fd;
+  background-color: #FFFFFF;
   padding-top: 72px;
   padding-left: 16px;
   padding-right: 16px;
@@ -1300,7 +1307,11 @@ input[type='checkbox']:checked + label > span {
 }
 
 .mobile-menu-nav-item {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.mobile-menu-nav-item:last-child {
+  margin-bottom: 0px;
 }
 
 .mobile-menu-nav-link {
@@ -1326,6 +1337,7 @@ input[type='checkbox']:checked + label > span {
 
 .mobile-menu-address-list {
   margin-bottom: 48px;
+  font-style: normal;
 }
 
 .mobile-menu-address-item {
