@@ -73,8 +73,8 @@ img {
 }
 
 .section {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   margin: 0 auto;
 }
 
@@ -154,13 +154,14 @@ img {
   position: fixed;
   width: 100%;
 
-  /* z-index: 9; */
+  z-index: 2;
 
   background: var(--WHITE, #fff);
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
 
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+
 }
 
 .header-container {
@@ -294,7 +295,7 @@ menu {
 .hero {
   max-width: 1440px;
   width: 320px;
-  height: 432px;
+
   margin-top: 72px;
   background-repeat: no-repeat;
   background-position: center;
@@ -330,7 +331,7 @@ menu {
 @media only screen and (min-width: 768px) {
   .hero {
     width: 768px;
-    height: 436px;
+  
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -376,14 +377,14 @@ menu {
   text-align: center;
 
   font-family: Roboto;
-  font-size: 36px;
+  font-size: 56px;
   font-weight: 700;
   font-style: normal;
   line-height: 1.07;
   letter-spacing: 0.02em;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 72px;
+  margin-bottom: 36px;
   max-width: 432px;
 }
 
@@ -420,8 +421,8 @@ menu {
 }
 @media only screen and (min-width: 768px) {
   .benefits {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
 
@@ -548,7 +549,7 @@ menu {
 
 .social-links {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   gap: 24px;
 }
 
@@ -585,8 +586,8 @@ menu {
 }
 
 .social-icon {
-  width: 18px;
-  height: 16px;
+  /* width: 18px;
+  height: 16px; */
   fill: #f4f4fd;
 }
 
@@ -615,8 +616,8 @@ menu {
 }
 @media only screen and (min-width: 768px) {
   .team {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
 /* .team-header { section-header */
@@ -664,8 +665,8 @@ menu {
 
 /* #region: section.#4: Portfolio */
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* .portfolio-header {=section-header */
@@ -682,8 +683,7 @@ menu {
 
 .portfolio-item {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-  0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 @media only screen and (min-width: 768px) {
@@ -1057,8 +1057,8 @@ menu {
   top: 24px;
   right: 24px;
 
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 
   border-radius: 50%;
 
@@ -1260,8 +1260,12 @@ input[type='checkbox']:checked + label > span {
   transform: translateX(-100%);
   transition: transform 300ms ease-in, visibility 300ms ease-in;
 
-  opacity: 0.99;
+  /* opacity: 0.99; */
   z-index: 11;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
 .mobile-menu.active {
