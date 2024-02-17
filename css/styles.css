@@ -549,7 +549,7 @@ menu {
 
 .social-links {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   gap: 24px;
 }
 
@@ -1015,15 +1015,13 @@ menu {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop,
-.backdrop.is-hidden {
+.backdrop{
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop.active,
-.backdrop.is-open {
+.backdrop.active {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
@@ -1371,6 +1369,7 @@ input[type='checkbox']:checked + label > span {
 .mobile-menu-social-list {
   display: flex;
   gap: 40px;
+  justify-content: flex-start;
 }
 
 /* social-icon-box */
