@@ -331,7 +331,8 @@ menu {
 @media only screen and (min-width: 768px) {
   .hero {
     width: 768px;
-  
+    padding-top: 112px;
+    padding-bottom: 112px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -352,7 +353,8 @@ menu {
 
 @media only screen and (min-width: 1158px) {
   .hero {
-    height: 600px;
+    padding-top: 188px;    
+    padding-bottom: 188px;
     width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -386,6 +388,15 @@ menu {
   margin-right: auto;
   margin-bottom: 36px;
   max-width: 432px;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-header {
+    font-size: 56px;
+    margin-bottom: 36px;
+    max-width: 496px;
+
+  }
 }
 
 .hero-button {
@@ -703,6 +714,7 @@ menu {
   }
   .portfolio-item {
     width: calc((100% - var(--column-gap) * (var(--items) - 1)) / var(--items));
+    box-shadow: none;
   }
 }
 
@@ -780,7 +792,7 @@ menu {
 
 @media only screen and (min-width: 768px) {
   .footer-container {
-    margin-left: 108px;
+    padding: 0 108px;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -791,6 +803,7 @@ menu {
 @media only screen and (min-width: 1158px) {
   .footer-container {
     margin: 0px auto;
+    padding: 0 15px;
   }
 }
 .footer-logo {
@@ -1214,8 +1227,8 @@ menu {
 }
 
 .modal-form-checkbox-label-span {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1232,7 +1245,13 @@ menu {
   color: #4d5ae5;
 }
 
-input[type='checkbox']:checked + label > span {
+/* input[type='checkbox']:checked + label > span {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
+} */
+
+input[type='checkbox']:checked + label > .modal-form-checkbox-label-span{
   background-color: #404bbf;
   fill: #f4f4fd;
   border: none;
